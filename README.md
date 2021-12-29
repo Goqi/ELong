@@ -89,4 +89,4 @@
 - ELong.exe scan
 - ELong.exe scan all
 
-![](TEMP/WX.png)
+![](wx/WX.png)
