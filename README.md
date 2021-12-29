@@ -58,6 +58,7 @@
 - ELong.exe poc
 - ELong.exe poc all
 - ELong.exe poc seeyon
+- ELong.exe poc vmware
 
 ## 03-漏洞利用
 
