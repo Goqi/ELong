@@ -2,7 +2,7 @@
 
 2021年12月9日晚上，Log4j的漏洞详情被公开了。至此，一个神洞出现了。我们给这个漏洞起了一个名字：永恒之恶龙！可以利用该工具更好的自测是否受该漏洞的影响，或是在授权的情况下可以利用该工具更好的进行漏洞探测或漏洞利用。作者将持续关注并逐步公布此漏洞的影响范围。公开版获取方式请查看微信群公告。作者：[Goqi](https://github.com/Goqi)
 
-本项目创建于2021年12月26日，最近的一次更新时间为2021年12月31日。
+本项目创建于2021年12月26日，最近的一次更新时间为2022年1月1日。
 
 - [01-上层建筑](https://github.com/Goqi/ELong#01-%E4%B8%8A%E5%B1%82%E5%BB%BA%E7%AD%91)
 - [02-漏洞证明](https://github.com/Goqi/ELong#02-%E6%BC%8F%E6%B4%9E%E8%AF%81%E6%98%8E)
@@ -39,15 +39,21 @@
 - [ ] SpringBoot#
 - [ ] Spring-Boot-strater-log4j2
 - [x] Unifi-Network
-- [x] VMWare-Horizon
+- [x] VMware-HCX
+- [x] VMware-Horizon
+- [x] VMware-NSX
 - [x] VMware-vCenter
-- [x] VMWare-Workspace-One
+- [x] VMware-vRealize
+- [x] VMware-Workspace-One
+- [x] Zipkin
 - [ ] Ghidra
 - [ ] Control-M
 - [ ] Symantec-Advanced-Threat-Protection
 - [ ] Cisco-CloudCenter-Suite
 
 二、资产识别
+
+​	资产识别功能暂时不准备更新，资产识别可以通过[Banli](https://github.com/Goqi/Banli)这个项目实现！
 
 - ELong.exe is
 - ELong.exe is all
@@ -56,20 +62,20 @@
 
 ## 02-漏洞证明
 
-使用此模块建议在资产识别之后进行，例如使用ELong.exe poc seeyon命令，会自动对isSeeyon.txt文件中的致远OA资产进行概念验证。使用ELong.exe poc all 会自动对存在漏洞的组件进行批量验证。
+程序目前的设计模式是只扫描不检测，通过JNDI或DNSLOG平台判断是否存在漏洞。使用此模块建议在资产识别之后进行。请创建poc.txt文件，内容为dnslog平台URL地址。使用ELong.exe poc seeyon命令，会自动对isSeeyon.txt文件中的致远OA进行漏洞验证，使用ELong.exe poc solr命令，会自动对isSolr.txt文件中的Solr资产进行漏洞验证。等。使用ELong.exe poc all 会自动对存在漏洞的组件进行批量验证。
 
 - ELong.exe poc
-- ELong.exe poc all
 - ELong.exe poc seeyon
-- ELong.exe poc vmware
+- ELong.exe poc solr
+- ELong.exe poc all
 
 ## 03-漏洞利用
 
-本工具公开版仅为poc验证工具，payload在程序中写死了，只可以判断是否存在漏洞，不可以获取系统权限。内部版提供exp功能，获取方式请加微信群反馈，提供一个组件的漏洞验证poc，将获取一键批量exp的原版程序！
+本工具公开版仅为poc验证工具，payload在程序中写死了，只可以判断是否存在漏洞，不可以获取系统权限。内部版提供exp功能，暂时不对外公开。
 
 ## 04-暴力扫描
 
-暴力扫描可以针对任意Java开发的网站！本程序支持1153个HTTP请求头的fuzz测试，作者利用此模块成功找到了2个尚未公开组件的RCE漏洞！批量fuzz可能会有意想不到的收获！但使用fuzz进行暴力扫描会发送超级多的恶意请求包，安全设备一定会产生告警，**此模块慎用**！使用此模块需要在当前路径创建urls.txt文件，运行程序会对urls.txt文件中的网址进行批量fuzz验证。
+暴力扫描可以针对任意Java开发的网站！本程序支持**1153个**HTTP请求头的fuzz测试，作者利用此模块成功找到了2个尚未公开组件的RCE漏洞！批量fuzz往往会有意想不到的收获，但使用fuzz模块进行暴力扫描会发送超级多的恶意请求包，安全设备一定会产生告警，**此模块慎用**！使用此模块需要在当前路径创建urls.txt文件，运行程序会对urls.txt文件中的网址进行HTTP请求头批量fuzz验证。
 
 - ELong.exe fuzz
 - ELong.exe fuzz one 默认使用Get请求fuzz，默认支持常见的65个Header。
