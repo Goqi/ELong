@@ -62,7 +62,9 @@
 
 ## 02-漏洞证明
 
-程序目前的设计模式是只扫描不检测，通过JNDI或DNSLOG平台判断是否存在漏洞。使用此模块建议在资产识别之后进行。请创建poc.txt文件，内容为dnslog平台URL地址。使用ELong.exe poc seeyon命令，会自动对isSeeyon.txt文件中的致远OA进行漏洞验证，使用ELong.exe poc solr命令，会自动对isSolr.txt文件中的Solr资产进行漏洞验证。等。使用ELong.exe poc all 会自动对存在漏洞的组件进行批量验证。
+程序目前的设计模式是只扫描不检测，通过JNDI或DNSLOG平台判断是否存在漏洞。使用此模块建议在资产识别之后进行。请创建poc.txt文件，内容为dnslog平台URL地址。使用ELong.exe poc seeyon命令，会自动对isSeeyon.txt文件中的致远OA进行漏洞验证，使用ELong.exe poc solr命令，会自动对isSolr.txt文件中的Solr资产进行漏洞验证等。**结果在dnslog平台上面可以看到是那个URL存在漏洞！**使用ELong.exe poc all 会自动对存在漏洞的组件进行批量验证。
+
+目前支持**17个**组件的漏洞概念证明！
 
 - ELong.exe poc
 - ELong.exe poc seeyon
