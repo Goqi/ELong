@@ -2,7 +2,7 @@
 
 2021年12月9日晚上，Log4j的漏洞详情被公开了。至此，一个神洞出现了。我们给这个漏洞起了一个名字：永恒之恶龙！可以利用该工具更好的自测是否受该漏洞的影响，或是在授权的情况下可以利用该工具更好的进行漏洞探测或漏洞利用。作者将持续关注并逐步公布此漏洞的影响范围。公开版获取方式请查看微信群公告。作者：[Goqi](https://github.com/Goqi)
 
-本项目创建于2021年12月26日，最近的一次更新时间为2022年1月16日。
+本项目创建于2021年12月26日，最近的一次更新时间为2022年1月18日。
 
 - [01-漏洞基础](https://github.com/Goqi/ELong#01-%E6%BC%8F%E6%B4%9E%E5%9F%BA%E7%A1%80)
 - [02-上层建筑](https://github.com/Goqi/ELong#02-%E4%B8%8A%E5%B1%82%E5%BB%BA%E7%AD%91)
@@ -109,7 +109,6 @@ Java RMI，即 远程方法调用(Remote Method Invocation)，一种用于实现
 - [ ] Symantec-Advanced-Threat-Protection
 - [ ] Cisco-CloudCenter-Suite
 - [ ] ......
-
 - https://fofa.so/static_pages/log4j2
 - https://github.com/cisagov/log4j-affected-db
 - https://github.com/YfryTchsGD/Log4jAttackSurface
